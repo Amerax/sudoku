@@ -2,19 +2,79 @@ import java.util.Scanner;
 
 public class SudokuGenerator
 {
+    static int[][] solution = new int[9][9]; 
+static Scanner input = new Scanner(System.in);
+
     static int[][] board = new int[9][9];
     
     public static void main(String[] args)
     {
         genBoard();
-        printBoard();
-        System.out.println("This is solved");
-        
-        scramble();
-        printBoard();
-        System.out.println("This is scrambled");
+    scramble();
 
+    for(int i = 0; i < 9; i++)
+        for(int j = 0; j < 9; j++)
+            solution[i][j] = board[i][j];
+
+    makePuzzle();  
+
+    playGame();
     }
+
+    public static void makePuzzle() {
+    int removed = 40;
+
+    while(removed > 0){
+        int r = (int)(Math.random() * 9);
+        int c = (int)(Math.random() * 9);
+
+        if(board[r][c] != 0){
+            board[r][c] = 0;
+            removed--;
+        }
+    }
+}
+
+public static void playGame(){
+
+    while(true){
+
+        printBoard();
+
+        if(isSolved()){
+            System.out.println("You solved");
+            break;
+        }
+
+        System.out.print("Row then Col then Number (1-9): ");
+
+        int row = input.nextInt() - 1;
+        int col = input.nextInt() - 1;
+        int num = input.nextInt();
+
+        if(board[row][col] != 0){
+            System.out.println("Cell already filled.");
+            continue;
+        }
+
+        if(solution[row][col] == num){
+            board[row][col] = num;
+            System.out.println("Correct");
+        }
+        else{
+            System.out.println("Wrong");
+        }
+    }
+}
+public static boolean isSolved(){
+
+    for(int i = 0; i < 9; i++)
+        for(int j = 0; j < 9; j++)
+            if(board[i][j] == 0)
+                return false;
+
+    return true;
+}
     
     public static void genBoard() {
             for (int row = 0; row < 9; row++) {
@@ -82,7 +142,10 @@ public class SudokuGenerator
             int counter = 0;
     
             for (int j = 0; j < board[i].length; j++) {
-                System.out.print(board[i][j] + " ");
+                if(board[i][j] == 0)
+    System.out.print(". ");
+    else
+    System.out.print(board[i][j] + " ");
                 counter++;
     
                 if (counter == 3 && j != board[i].length - 1) {
