@@ -4,7 +4,7 @@ The project is a simple Sudoku board generator and player. It basically makes a 
 
 At first the first few commits made the actual genertor and radomizer, and next then I made the actual player by moving and swapping some parts. 
 
-To run the program simply run it simply download the .exe release. If you want to set up locally and on any device make sure you installed java jdk from oracle, then clone this repo with git or just copy and paste the code into your ide and run it from your ide terminal all locally. 
+To run the program simply run it simply download the .exe release. If you want to set up locally and on any device make sure you installed java jdk from oracle, then clone this repo with git and run the .java file or just copy and paste the code into your ide and run it from your ide terminal all locally. 
 
 The Sudoku board is generated through a mathematical formula to fill a 9x9 2D array. This formula ensures that every row and column and 3x3 square has the numbers 1-9 exactly once. This math formula basically staggers the numbers so that it fits in properly. Finally, for the scramble, the code uses several transformations like swaping number pairs, columns and rows throughout the entire board. This algorithim is completly random so a different board is made every time.
 
