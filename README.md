@@ -18,7 +18,8 @@ The Sudoku board is generated through a mathematical formula to fill a 9x9 2D ar
 
 The files included in this project include the actual .java source code itself, this README, and a release under releases. 
 
-Demo Image 
-<img width="652" height="432" alt="image" src="https://github.com/user-attachments/assets/59e4dd15-543f-4606-8382-54c076ae2b24" />
+Demo Image   
+
+<img width="652" height="432" alt="image" src="https://github.com/user-attachments/assets/eec33342-1988-4200-82a5-03b54014fc8a" />
 
 <img width="484" height="597" alt="image" src="https://github.com/user-attachments/assets/8f38851f-3551-4e1a-9b66-0a61d3cdd223" />
