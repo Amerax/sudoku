@@ -5,7 +5,7 @@ The project is a simple Sudoku board generator and player. It basically makes a 
 At first the first few commits made the actual genertor and radomizer, and next then I made the actual player by moving and swapping some parts. 
 
 
-Requirments: Java must be installed. (You can check if you have it installed by running "  java -version   ".
+Requirments: Java must be installed. (You can check if you have it installed by running "  java -version   " in your terminal.)
 
  If you want to set up locally and on any device make sure you installed java jdk from oracle, then clone this repo with git and run the .java file or just copy and paste the code into your ide and run it from your ide terminal all locally. 
  Otherwise, if you want to run from releases, open releases, and download the .jar file. After that open command prompt and cd into the folder you saved the .jar file to. Finally run the game using "   java -jar SudokuGenerator.jar   ". Look at first image to see example of me doing it. 
